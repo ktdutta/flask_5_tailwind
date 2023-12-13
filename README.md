@@ -39,17 +39,17 @@ I used tailwind in order to help design the website to make liking by experiment
 
 ## Cloud Deployment 
 
-Installing Azure CLI 
+#### Installing Azure CLI 
 
 
 ```curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash```
 
-Check Installation 
+#### Check Installation 
 
 
 ```az```
 
-Giving Shell Permission to connect with Microsoft Azure Account 
+#### Giving Shell Permission to connect with Microsoft Azure Account 
 
 
 ```az login --use-device-code```
@@ -57,19 +57,19 @@ Giving Shell Permission to connect with Microsoft Azure Account
   It will ask for your password followed by an authentication code to sign into Microsoft Azure
 
 
-Subscription IDs
+##### Subscription IDs
 
 
 ```az account list --output table```
 
 
-Set the Appropriate Subscription Name (Azure for Students)
+#### Set the Appropriate Subscription Name (Azure for Students)
 
 
 ```az account set --subscription (insert subscription ID)```
 
 
-Deploy Application Using Azure 
+#### Deploy Application Using Azure 
 
 
 ```az webapp up --resource-group (insert group name) --name (insert your app name) --runtime <(Insert language)> --sku <(insert service plan)>```
@@ -80,5 +80,6 @@ Deploy Application Using Azure
 After completing the deploying process I accessed the link to my deployed application however I kept running into a 500 internal server error. 
 
 <img width="990" alt="Server Error" src="https://github.com/ktdutta/flask_5_tailwind/assets/141374153/74ef7afa-5bc7-4b5f-9eda-c04b4598a15a">
+
 
 In order to troubleshoot I tried to run and deploy the flask application with the message ‘hi’ instead of rendering it to the index_tailwind.html file. When I did this the flask application ran fine, which tells me there must be an issue with the code in the index_tailwind.html file which I am in the process of identifying. 
